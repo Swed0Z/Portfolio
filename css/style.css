@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#checkbox {
+    display: none;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    height: calc(4px * 3 + 11px * 2);
+  }
+  
+  .bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: calc(4px / 2);
+    background: #7b52b9;
+    color: inherit;
+    opacity: 1;
+    transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
+  }
+  
+  /***** Tornado Animation *****/
+  
+  .bar--top {
+    bottom: calc(50% + 11px + 4px/ 2);
+    transition-property: bottom,transform;
+    transition-delay: calc(0s + 0.35s) * .6;
+  }
+  
+  .bar--middle {
+    top: calc(50% - 4px/ 2);
+    transition-property: opacity,transform;
+    transition-delay: calc(0s + 0.35s * .3);
+  }
+  
+  .bar--bottom {
+    top: calc(50% + 11px + 4px/ 2);
+    transition-property: top,transform;
+    transition-delay: 0s;
+  }
+  
+  #checkbox:checked + .toggle .bar--top {
+    transform: rotate(-135deg);
+    transition-delay: 0s;
+    bottom: calc(50% - 4px/ 2);
+  }
+  
+  #checkbox:checked + .toggle .bar--middle {
+    opacity: 0;
+    transform: rotate(-135deg);
+    transition-delay: calc(0s + 0.35s * .3);
+  }
+  
+  #checkbox:checked + .toggle .bar--bottom {
+    top: calc(50% - 4px/ 2);
+    transform: rotate(-225deg);
+    transition-delay: calc(0s + 0.35s * .6);
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  header {
+    position: relative;
+    padding: 0 2rem;
+  }
+
+ .navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+  .navbar .links {
+      display: flex;
+      gap: 2rem;
+  }
+
+  .navbar .toggle_btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+
+  /***** Dropdown Menu *****/
+  .dropdown_menu{
+    display: none;
+    position:absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .dropdown_menu.open {
+    height: 240px;
+  }
+
+  .dropdown_menu ul{
+    padding: 0;
+  }
+
+  .dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  /***** Responsive Desing *****/
+  @media (max-width: 992px){
+    .navbar .links{
+      display: none;
+    }
+    .navbar .toggle_btn{
+      display: block;
+    }
+    .dropdown_menu {
+      display: block;
+    }
+  }
+  body{
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e26a0dd2-4eaa-4270-992b-dd050f00dfb5/dgx2ymn-641857fd-d0b9-4116-a8f5-2f69a40c0dba.jpg/v1/fill/w_297,h_170,q_75,strp/snowy_mountains__by_jemrdemon_dgx2ymn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTcwIiwicGF0aCI6IlwvZlwvZTI2YTBkZDItNGVhYS00MjcwLTk5MmItZGQwNTBmMDBkZmI1XC9kZ3gyeW1uLTY0MTg1N2ZkLWQwYjktNDExNi1hOGY1LTJmNjlhNDBjMGRiYS5qcGciLCJ3aWR0aCI6Ijw9Mjk3In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.U5xLnHdPTqFbWarOpdiSHNo8lyQ3v0XRfY3A1Kw0KWA');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
