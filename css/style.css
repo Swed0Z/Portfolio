@@ -2,6 +2,15 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e26a0dd2-4eaa-4270-992b-dd050f00dfb5/dgx2ymn-641857fd-d0b9-4116-a8f5-2f69a40c0dba.jpg/v1/fill/w_297,h_170,q_75,strp/snowy_mountains__by_jemrdemon_dgx2ymn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTcwIiwicGF0aCI6IlwvZlwvZTI2YTBkZDItNGVhYS00MjcwLTk5MmItZGQwNTBmMDBkZmI1XC9kZ3gyeW1uLTY0MTg1N2ZkLWQwYjktNDExNi1hOGY1LTJmNjlhNDBjMGRiYS5qcGciLCJ3aWR0aCI6Ijw9Mjk3In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.U5xLnHdPTqFbWarOpdiSHNo8lyQ3v0XRfY3A1Kw0KWA');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
 #checkbox {
     display: none;
   }
@@ -143,8 +152,9 @@
       display: block;
     }
   }
-  body{
-    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e26a0dd2-4eaa-4270-992b-dd050f00dfb5/dgx2ymn-641857fd-d0b9-4116-a8f5-2f69a40c0dba.jpg/v1/fill/w_297,h_170,q_75,strp/snowy_mountains__by_jemrdemon_dgx2ymn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTcwIiwicGF0aCI6IlwvZlwvZTI2YTBkZDItNGVhYS00MjcwLTk5MmItZGQwNTBmMDBkZmI1XC9kZ3gyeW1uLTY0MTg1N2ZkLWQwYjktNDExNi1hOGY1LTJmNjlhNDBjMGRiYS5qcGciLCJ3aWR0aCI6Ijw9Mjk3In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.U5xLnHdPTqFbWarOpdiSHNo8lyQ3v0XRfY3A1Kw0KWA');
-    background-repeat: no-repeat;
-    background-size: cover;
+  @media (max-width: 576px){
+    .dropdown_menu{
+      left: 2rem;
+      width: unset;
+    }
   }
