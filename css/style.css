@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
  }
-
+ :root {
+  --bg-color: #080808;
+  --second-bg-color: #131313;
+  --tex-color: white;
+  --main-color: #00ffee;
+ }
  body{
    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e26a0dd2-4eaa-4270-992b-dd050f00dfb5/dgx2ymn-641857fd-d0b9-4116-a8f5-2f69a40c0dba.jpg/v1/fill/w_297,h_170,q_75,strp/snowy_mountains__by_jemrdemon_dgx2ymn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTcwIiwicGF0aCI6IlwvZlwvZTI2YTBkZDItNGVhYS00MjcwLTk5MmItZGQwNTBmMDBkZmI1XC9kZ3gyeW1uLTY0MTg1N2ZkLWQwYjktNDExNi1hOGY1LTJmNjlhNDBjMGRiYS5qcGciLCJ3aWR0aCI6Ijw9Mjk3In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.U5xLnHdPTqFbWarOpdiSHNo8lyQ3v0XRfY3A1Kw0KWA');
    background-repeat: no-repeat;
@@ -146,7 +151,7 @@
 
   section{
     min-height: 100vh;
-    padding: 10rem 12% 10rem;
+    padding: 0rem 12% 10rem;
   }
 
   .home{
@@ -157,9 +162,45 @@
   }
 
   .home-content{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  span{
+    color: var(--main-color);
+  }
+
+  .home-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+  }
+
+  .home-content h1 {
+    margin-bottom: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+  }
+
+  .home-img{
+    border-radius: 50%;
   }
   
+  .home-img img {
+    position: relative;
+    width: 32vh;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4 ease-in-out;
+  }
+  .home-img:hover{
+    box-shadow: 0 0 25px var(--main-color);
+  }
 
   /***** Responsive Desing *****/
   @media (max-width: 992px){
